@@ -21,18 +21,21 @@ func main(){
 	pl("Hello Go")
 
 	// Get user input (To run this in the terminal go run hellogo.go)
-	pl("Where do you name ?")
+	pl("Where do you live ?")
 	// Setup buffered reader that gets text from the keyboard
 	reader := bufio.NewReader(os.Stdin)
 	// Copy text up to the newline
 	// The blank identifier _ will get err and ignore it (Bad Practice)
 	// name, _ := reader.ReadString('\n')
 	// It is better to handle it
-	name, err := reader.ReadString('\n')
+	place, err := reader.ReadString('\n')
 	if err == nil {
-		pl("Hello", name)
+		pl("Welcome To", place)
 	} else {
 		// Log this error
 		log.Fatal(err)
 	}
 }
+
+
+// go run gotraining.go
